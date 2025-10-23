@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="초등·중학생 자녀 유학 전문. 20년 경력, 안전한 환경, 24시간 지원. 카카오톡 상담 가능.">
+    <meta property="og:title" content="뉴질랜드 타우랑가 유학 | 20년 경력 전문 유학원">
+    <meta property="og:description" content="행복이 우선인 교육입니다. 안전한 뉴질랜드 타우랑가에서 시작하는 우리 아이의 글로벌 교육 여정">
+    <meta property="og:type" content="website">
+    
+    <title>뉴질랜드 타우랑가 유학 | 20년 경력 전문 유학원</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables */
+        :root {
+            --deep-navy: #1B3A6D;
+            --royal-blue: #2E5090;
+            --teal: #4FBDBA;
+            --light-teal: #7DD3D0;
+            --soft-gold: #D4AF37;
+            --warm-gold: #E8C468;
+            --white: #FFFFFF;
+            --light-gray: #F5F7FA;
+            --medium-gray: #8B95A5;
+            --dark-gray: #2C3E50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Pretendard', sans-serif;
+        }
+        
+        /* Progress Bar */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--teal);
+            z-index: 9999;
+            transition: width 0.1s ease;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(27, 58, 109, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all 0.3s ease;
+        }
+        
+        nav.scrolled {
+            padding: 15px 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .nav-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--light-teal);
+        }
+        
+        .nav-cta {
+            background: var(--soft-gold);
+            color: var(--deep-navy);
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-cta:hover {
+            background: var(--warm-gold);
+            transform: translateY(-2px);
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--white);
+            transition: all 0.3s ease;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1920&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            padding: 0 20px;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 18px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: var(--soft-gold);
+            color: var(--deep-navy);
+        }
+        
+        .btn-primary:hover {
+            background: var(--warm-gold);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--deep-navy);
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+        
+        .scroll-indicator::before {
+            content: '↓';
+            font-size: 32px;
+            color: var(--white);
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-20px); }
+            60% { transform: translateX(-50%) translateY(-10px); }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Section Container */
+        .section {
+            padding: 96px 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 60px;
+        }
+        
+        .section-title {
+            font-size: 42px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--deep-navy);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 20px;
+            color: var(--medium-gray);
+            max-width: 700px;
+            margin: -40px auto 60px;
+        }
+        
+        /* Core Values Section */
+        .core-values {
+            background: var(--white);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .value-card {
+            background: var(--white);
+            padding: 48px 32px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .value-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 24px;
+            color: var(--teal);
+            font-size: 64px;
+        }
+        
+        .value-card h3 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--deep-navy);
+        }
+        
+        .value-card p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--medium-gray);
+            white-space: pre-line;
+        }
+        
+        .badge-20 {
+            display: inline-block;
+            background: var(--soft-gold);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        
+        /* Safety & Living Environment */
+        .safety-living {
+            background: var(--light-gray);
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .content-text h2 {
+            font-size: 42px;
+            margin-bottom: 24px;
+            color: var(--deep-navy);
+        }
+        
+        .content-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--medium-gray);
+            margin-bottom: 32px;
+        }
+        
+        .feature-list {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+        
+        .feature-list li {
+            font-size: 18px;
+            padding: 12px 0;
+            color: var(--dark-gray);
+        }
+        
+        .feature-list li::before {
+            content: '✓';
+            color: var(--teal);
+            font-weight: 700;
+            margin-right: 12px;
+        }
+        
+        /* Education Environment */
+        .education {
+            background: linear-gradient(rgba(27, 58, 109, 0.85), rgba(27, 58, 109, 0.85)),
+                        url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1920&q=80') center/cover fixed;
+            color: var(--white);
+        }
+        
+        .education .section-title {
+            color: var(--white);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .feature-box {
+            text-align: center;
+        }
+        
+        .feature-box h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        
+        .feature-box p {
+            font-size: 16px;
+            line-height: 1.7;
+            opacity: 0.9;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 32px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--soft-gold);
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        /* Success Stories */
+        .success-stories {
+            background: var(--white);
+        }
+        
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .story-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .story-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .story-meta {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--light-gray);
+        }
+        
+        .story-grade {
+            color: var(--teal);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .story-period {
+            color: var(--medium-gray);
+            font-size: 14px;
+        }
+        
+        .story-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--dark-gray);
+            margin-bottom: 20px;
+        }
+        
+        .story-author {
+            text-align: right;
+            color: var(--medium-gray);
+            font-style: italic;
+        }
+        
+        .verified-badge {
+            display: inline-block;
+            background: var(--teal);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        /* History Timeline */
+        .history {
+            background: var(--light-gray);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--teal);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            grid-column: 2;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-year {
+            grid-column: 1;
+            text-align: right;
+        }
+        
+        .timeline-year {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--deep-navy);
+            position: relative;
+        }
+        
+        .timeline-year::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--soft-gold);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-year::after {
+            right: -31px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-year::after {
+            left: -31px;
+        }
+        
+        .timeline-content {
+            background: var(--white);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .stats-highlight {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            background: var(--white);
+            padding: 32px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .stat-item .number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--teal);
+            margin-bottom: 8px;
+        }
+        
+        .stat-item .label {
+            font-size: 14px;
+            color: var(--medium-gray);
+        }
+        
+        /* Programs & Services */
+        .programs {
+            background: var(--white);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        
+        .service-card {
+            background: var(--light-gray);
+            padding: 40px;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 48px;
+            color: var(--teal);
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--deep-navy);
+        }
+        
+        .service-card ul {
+            list-style: none;
+        }
+        
+        .service-card li {
+            padding: 8px 0;
+            color: var(--dark-gray);
+            position: relative;
+            padding-left: 24px;
+        }
+        
+        .service-card li::before {
+            content: '•';
+            color: var(--teal);
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Tauranga Life */
+        .tauranga-life {
+            background: var(--light-gray);
+        }
+        
+        .life-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .life-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+        
+        .life-features {
+            list-style: none;
+        }
+        
+        .life-features li {
+            margin-bottom: 32px;
+        }
+        
+        .feature-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--deep-navy);
+            margin-bottom: 8px;
+        }
+        
+        .feature-desc {
+            font-size: 16px;
+            color: var(--medium-gray);
+            line-height: 1.7;
+        }
+        
+        .blockquote {
+            background: var(--white);
+            padding: 32px;
+            border-left: 4px solid var(--teal);
+            border-radius: 8px;
+            font-size: 20px;
+            font-style: italic;
+            color: var(--deep-navy);
+            margin-top: 40px;
+        }
+        
+        /* Video Section */
+        .video-section {
+            background: var(--light-gray);
+        }
+        
+        .video-player {
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+        
+        .video-player iframe {
+            width: 100%;
+            height: 675px;
+            border: none;
+        }
+        
+        .video-thumbnails {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        
+        .video-thumb {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .video-thumb:hover {
+            transform: scale(1.05);
+        }
+        
+        .thumb-image {
+            width: 100%;
+            height: 203px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .thumb-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--deep-navy);
+            text-align: center;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, var(--deep-navy) 0%, var(--royal-blue) 100%);
+            color: var(--white);
+        }
+        
+        .contact .section-title {
+            color: var(--white);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .contact-card {
+            background: var(--white);
+            padding: 48px 32px;
+            border-radius: 16px;
+            text-align: center;
+            color: var(--dark-gray);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+        }
+        
+        .contact-icon {
+            font-size: 64px;
+            margin-bottom: 24px;
+        }
+        
+        .contact-card h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            color: var(--deep-navy);
+        }
+        
+        .contact-card p {
+            font-size: 16px;
+            color: var(--medium-gray);
+            margin-bottom: 24px;
+        }
+        
+        .btn-kakao {
+            background: #FEE500;
+            color: #3C1E1E;
+        }
+        
+        .btn-kakao:hover {
+            background: #FFEB3B;
+        }
+        
+        .btn-naver {
+            background: #03C75A;
+            color: var(--white);
+        }
+        
+        .btn-naver:hover {
+            background: #02B350;
+        }
+        
+        .btn-phone {
+            background: var(--deep-navy);
+            color: var(--white);
+        }
+        
+        .btn-phone:hover {
+            background: var(--royal-blue);
+        }
+        
+        .phone-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--teal);
+            margin: 16px 0;
+        }
+        
+        .office-hours {
+            font-size: 14px;
+            color: var(--medium-gray);
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .info-item {
+            font-size: 18px;
+            margin: 16px 0;
+            color: var(--white);
+        }
+        
+        .info-item a {
+            color: var(--light-teal);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .info-item a:hover {
+            color: var(--soft-gold);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--deep-navy);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .footer-desc {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+        }
+        
+        .footer-section h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--light-teal);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1199px) {
+            .container {
+                padding: 0 40px;
+            }
+            
+            .nav-container {
+                padding: 0 40px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            /* Navigation */
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100vh;
+                background: var(--teal);
+                flex-direction: column;
+                justify-content: center;
+                transition: left 0.3s ease;
+                padding: 60px 20px;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .hamburger {
+                display: flex;
+                z-index: 1001;
+            }
+            
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(8px, 8px);
+            }
+            
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+            
+            .container {
+                padding: 0 20px;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            /* Hero */
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            /* Section Title */
+            .section-title {
+                font-size: 28px;
+                margin-bottom: 40px;
+            }
+            
+            /* Grids */
+            .values-grid,
+            .stories-grid,
+            .features-grid,
+            .stats,
+            .services-grid,
+            .contact-grid,
+            .video-thumbnails,
+            .stats-highlight {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .two-column,
+            .life-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Timeline */
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                grid-template-columns: 1fr;
+                padding-left: 60px;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-content {
+                grid-column: 1;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-year {
+                grid-column: 1;
+                text-align: left;
+            }
+            
+            .timeline-year::after {
+                left: -50px !important;
+            }
+            
+            /* Video */
+            .video-player iframe {
+                height: 400px;
+            }
+            
+            /* Footer */
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div id="progress-bar"></div>
+    
+    <!-- Navigation -->
+    <nav id="nav">
+        <div class="nav-container">
+            <a href="#" class="logo">Tauranga Study</a>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#core-values">핵심가치</a></li>
+                <li><a href="#success-stories">성공사례</a></li>
+                <li><a href="#programs">프로그램</a></li>
+                <li><a href="#tauranga">타우랑가</a></li>
+                <li><a href="#contact" class="nav-cta">무료 상담</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>행복이 우선인 교육입니다.</h1>
+            <p>안전한 뉴질랜드 타우랑가에서 시작하는<br>우리 아이의 글로벌 교육 여정</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">무료 1:1 상담 신청하기</a>
+                <a href="#success-stories" class="btn btn-secondary">성공 스토리 보기</a>
+            </div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+    
+    <!-- Core Values Section -->
+    <section id="core-values" class="section core-values">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">20년 경험이 만든 차별화된 가치</h2>
+            <div class="values-grid">
+                <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-icon">🛡️</div>
+                    <h3>Safety</h3>
+                    <p>깨끗하고 안전한 타우랑가 환경
+검증된 홈스테이 및 거주 환경
+24/7 긴급 지원 체계</p>
+                </div>
+                
+                <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="badge-20">20 Years</div>
+                    <div class="value-icon">🏆</div>
+                    <h3>Expertise</h3>
+                    <p>20년 경력 강조
+타우랑가 지역 전문가
+검증된 성공 실적</p>
+                </div>
+                
+                <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="value-icon">💬</div>
+                    <h3>Continuous Support</h3>
+                    <p>카카오톡 실시간 상담
+네이버 카페 커뮤니티
+070 전화 상담</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Safety & Living Environment -->
+    <section class="section safety-living">
+        <div class="container">
+            <div class="two-column">
+                <div class="image-gallery" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&q=80" alt="Living Room" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80" alt="Bedroom" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Kitchen" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Study Room" class="gallery-image">
+                </div>
+                
+                <div class="content-text" data-aos="fade-left">
+                    <h2>아이가 머무를 공간, 직접 확인하세요</h2>
+                    <p>모든 홈스테이와 거주 환경은 20년 경력으로 직접 검증하고 선별한 안전한 공간입니다.</p>
+                    
+                    <ul class="feature-list">
+                        <li>깨끗하고 밝은 개별 침실</li>
+                        <li>가족 같은 따뜻한 분위기</li>
+                        <li>학교와 가까운 접근성</li>
+                        <li>정기적인 환경 점검</li>
+                    </ul>
+                    
+                    <a href="#contact" class="btn btn-primary">거주 환경 더 보기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Education Environment -->
+    <section class="section education">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">세계를 품은 안전한 교육 환경</h2>
+            
+            <div class="features-grid">
+                <div class="feature-box" data-aos="fade-up" data-aos-delay="100">
+                    <h3>🌏 다문화 교육</h3>
+                    <p>아시아, 유럽, 오세아니아 친구들과 함께 성장하는 글로벌 환경</p>
+                </div>
+                
+                <div class="feature-box" data-aos="fade-up" data-aos-delay="200">
+                    <h3>👥 소규모 학급</h3>
+                    <p>한 반 20~25명의 소규모 학급으로 세심한 개별 케어 제공</p>
+                </div>
+                
+                <div class="feature-box" data-aos="fade-up" data-aos-delay="300">
+                    <h3>🚌 안전한 통학</h3>
+                    <p>학교 버스 또는 도보 통학 가능한 안전한 주거지역</p>
+                </div>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-box" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-number counter" data-target="15">0</div>
+                    <div class="stat-label">협력 학교 (개교)</div>
+                </div>
+                
+                <div class="stat-box" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-number counter" data-target="500">0</div>
+                    <div class="stat-label">졸업생 (명)</div>
+                </div>
+                
+                <div class="stat-box" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-number counter" data-target="98">0</div>
+                    <div class="stat-label">학부모 만족도 (%)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Success Stories -->
+    <section id="success-stories" class="section success-stories">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">학부모님들의 생생한 후기</h2>
+            
+            <div class="stories-grid">
+                <div class="story-card" data-aos="fade-up" data-aos-delay="100">
+                    <span class="verified-badge">✓ 실제 후기</span>
+                    <div class="story-meta">
+                        <div class="story-grade">초등학교 5학년 유학</div>
+                        <div class="story-period">2023년 3월 ~ 현재</div>
+                    </div>
+                    <p class="story-text">
+                        "처음엔 걱정이 많았지만, 20년 경력의 세심한 케어 덕분에 아이가 3개월 만에 학교에 적응했어요. 카카오톡으로 언제든 상담할 수 있어서 큰 안심이 됩니다."
+                    </p>
+                    <div class="story-author">- 김○○ 어머니</div>
+                </div>
+                
+                <div class="story-card" data-aos="fade-up" data-aos-delay="200">
+                    <span class="verified-badge">✓ 실제 후기</span>
+                    <div class="story-meta">
+                        <div class="story-grade">중학교 1학년 유학</div>
+                        <div class="story-period">2022년 1월 ~ 현재</div>
+                    </div>
+                    <p class="story-text">
+                        "타우랑가의 안전하고 깨끗한 환경이 정말 마음에 들어요. 아이가 다양한 국적의 친구들과 어울리며 영어 실력은 물론 자신감도 크게 늘었습니다."
+                    </p>
+                    <div class="story-author">- 박○○ 어머니</div>
+                </div>
+                
+                <div class="story-card" data-aos="fade-up" data-aos-delay="300">
+                    <span class="verified-badge">✓ 실제 후기</span>
+                    <div class="story-meta">
+                        <div class="story-grade">초등학교 6학년 유학</div>
+                        <div class="story-period">2021년 7월 ~ 2024년 12월</div>
+                    </div>
+                    <p class="story-text">
+                        "네이버 카페에서 다른 학부모님들과 정보를 공유할 수 있어 좋았고, 긴급 상황에도 070 번호로 즉시 도움받을 수 있어서 믿고 맡길 수 있었습니다."
+                    </p>
+                    <div class="story-author">- 이○○ 어머니</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- History Timeline -->
+    <section class="section history">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">20년의 신뢰, 숫자로 증명합니다</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-year">2005</div>
+                    <div class="timeline-content">타우랑가 유학원 설립</div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-year">2008</div>
+                    <div class="timeline-content">홈스테이 네트워크 구축 (50+ 가정)</div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-year">2010</div>
+                    <div class="timeline-content">서울 코엑스 뉴질랜드 교육박람회 참가 시작</div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-year">2012</div>
+                    <div class="timeline-content">유학 전문 프로그램 시작</div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-year">2015</div>
+                    <div class="timeline-content">누적 상담 1,000가족 돌파</div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-year">2018</div>
+                    <div class="timeline-content">네이버 카페 커뮤니티 오픈</div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-year">2020</div>
+                    <div class="timeline-content">온라인 원격 지원 시스템 구축</div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content">졸업생 500명 돌파</div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">20주년, 새로운 도약</div>
+                </div>
+            </div>
+            
+            <div class="stats-highlight">
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="number counter" data-target="20">0</div>
+                    <div class="label">운영 경력 (년)</div>
+                </div>
+                
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="number counter" data-target="1500">0</div>
+                    <div class="label">상담 가족 (가족)</div>
+                </div>
+                
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="number counter" data-target="500">0</div>
+                    <div class="label">성공 졸업 (명)</div>
+                </div>
+                
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="number counter" data-target="15">0</div>
+                    <div class="label">협력 학교 (개교)</div>
+                </div>
+                
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="number counter" data-target="98">0</div>
+                    <div class="label">학부모 만족도 (%)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Programs & Services -->
+    <section id="programs" class="section programs">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">유학, 처음부터 끝까지 함께합니다</h2>
+            
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">📋</div>
+                    <h3>출국 전 준비</h3>
+                    <ul>
+                        <li>학교 선정 및 입학 수속</li>
+                        <li>비자 신청 지원</li>
+                        <li>항공권 및 보험 안내</li>
+                        <li>오리엔테이션 제공</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">🏠</div>
+                    <h3>정착 지원</h3>
+                    <ul>
+                        <li>공항 픽업 서비스</li>
+                        <li>홈스테이 배정 및 관리</li>
+                        <li>은행·핸드폰 개설 도움</li>
+                        <li>생활 정보 제공</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">📚</div>
+                    <h3>학업 관리</h3>
+                    <ul>
+                        <li>학교 생활 적응 모니터링</li>
+                        <li>학업 성적 관리</li>
+                        <li>학부모-학교 소통 지원</li>
+                        <li>진학 상담</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">❤️</div>
+                    <h3>생활 케어</h3>
+                    <ul>
+                        <li>24/7 긴급 연락망</li>
+                        <li>정기 방문 및 면담</li>
+                        <li>의료 지원 연결</li>
+                        <li>문화 적응 프로그램</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tauranga Life -->
+    <section id="tauranga" class="section tauranga-life">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">왜 타우랑가일까요?</h2>
+            
+            <div class="life-content">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Tauranga Beach" class="life-image" data-aos="fade-right">
+                
+                <div class="life-text" data-aos="fade-left">
+                    <ul class="life-features">
+                        <li>
+                            <div class="feature-title">🌊 아름다운 자연환경</div>
+                            <div class="feature-desc">뉴질랜드에서 가장 햇살이 많은 도시</div>
+                        </li>
+                        
+                        <li>
+                            <div class="feature-title">🏫 우수한 교육 시스템</div>
+                            <div class="feature-desc">공립·사립 명문 학교 다수 위치</div>
+                        </li>
+                        
+                        <li>
+                            <div class="feature-title">🏡 안전한 주거 환경</div>
+                            <div class="feature-desc">범죄율이 낮고 가족 친화적인 커뮤니티</div>
+                        </li>
+                        
+                        <li>
+                            <div class="feature-title">🌏 다문화 사회</div>
+                            <div class="feature-desc">다양한 국적의 사람들이 조화롭게 생활</div>
+                        </li>
+                        
+                        <li>
+                            <div class="feature-title">✈️ 접근성</div>
+                            <div class="feature-desc">오클랜드에서 차로 2.5시간, 비행 40분</div>
+                        </li>
+                    </ul>
+                    
+                    <div class="blockquote">
+                        "타우랑가는 아이들이 안전하게 성장하기에 가장 이상적인 뉴질랜드 도시입니다."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video Section -->
+    <section class="section video-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">타우랑가 학교를 직접 만나보세요</h2>
+            <p class="section-subtitle" data-aos="fade-up">실제 학교 환경과 학생들의 생생한 모습을 영상으로 확인하실 수 있습니다.</p>
+            
+            <div class="video-player" data-aos="zoom-in">
+                <iframe 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    title="Tauranga School Tour"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            
+            <div class="video-thumbnails">
+                <div class="video-thumb" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400&q=80" alt="Student Daily Life" class="thumb-image">
+                    <div class="thumb-title">학생 일과 소개</div>
+                </div>
+                
+                <div class="video-thumb" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&q=80" alt="Multicultural Friends" class="thumb-image">
+                    <div class="thumb-title">다문화 친구들과 함께</div>
+                </div>
+                
+                <div class="video-thumb" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1517164850305-99a3e65bb47e?w=400&q=80" alt="After School Activities" class="thumb-image">
+                    <div class="thumb-title">방과후 활동</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">지금 바로 상담하세요</h2>
+            <p class="section-subtitle" data-aos="fade-up">20년 경력의 전문가가 24시간 이내에 답변드립니다</p>
+            
+            <div class="contact-grid">
+                <div class="contact-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="contact-icon">💬</div>
+                    <h3>카카오톡 1:1 상담</h3>
+                    <p>가장 빠른 실시간 상담</p>
+                    <a href="#" class="btn btn-kakao">카카오톡으로 문의하기</a>
+                </div>
+                
+                <div class="contact-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="contact-icon">👥</div>
+                    <h3>학부모 커뮤니티</h3>
+                    <p>1,000+ 회원의 생생한 정보</p>
+                    <a href="#" class="btn btn-naver">네이버 카페 가입하기</a>
+                </div>
+                
+                <div class="contact-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="contact-icon">📞</div>
+                    <h3>070 전화 상담</h3>
+                    <div class="phone-number">070-XXXX-XXXX</div>
+                    <p class="office-hours">평일 09:00 - 18:00 (한국시간)</p>
+                    <a href="tel:070-XXXX-XXXX" class="btn btn-phone">전화 걸기</a>
+                </div>
+            </div>
+            
+            <div class="contact-info" data-aos="fade-up">
+                <div class="info-item">📍 뉴질랜드 타우랑가 <a href="#">[Google Maps 위치 보기]</a></div>
+                <div class="info-item">📧 <a href="mailto:info@taurangastudy.co.nz">info@taurangastudy.co.nz</a></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Tauranga Study Agency</div>
+                    <p class="footer-desc">20년 경력의 타우랑가 동반유학 전문 에이전시</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#programs">프로그램 안내</a></li>
+                        <li><a href="#success-stories">성공 사례</a></li>
+                        <li><a href="#tauranga">타우랑가 소개</a></li>
+                        <li><a href="#contact">상담하기</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>전화: 070-XXXX-XXXX</li>
+                        <li><a href="mailto:info@taurangastudy.co.nz">info@taurangastudy.co.nz</a></li>
+                        <li><a href="#">카카오톡 채널</a></li>
+                        <li><a href="#">네이버 카페</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Tauranga Study Agency. All rights reserved.<br>
+                뉴질랜드 정식 등록 교육 에이전시</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+        
+        // Progress Bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progress-bar').style.width = scrolled + '%';
+        });
+        
+        // Sticky Navigation
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+        
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        const countUp = (counter) => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const increment = target / speed;
+            
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(() => countUp(counter), 10);
+            } else {
+                counter.innerText = target + (target < 100 ? '' : '+');
+            }
+        };
+        
+        // Intersection Observer for counters
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    if (counter.innerText === '0') {
+                        countUp(counter);
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        counters.forEach(counter => {
+            counterObserver.observe(counter);
+        });
+    </script>
+</body>
+</html>
