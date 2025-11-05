@@ -109,17 +109,37 @@ tauranga-study-website/
 ### 외부 라이브러리 및 리소스
 
 #### 폰트
-- **Google Fonts**: Inter (400, 600, 700)
-- **Pretendard**: 한글 최적화 폰트 (CDN)
+- **[Google Fonts - Inter](https://fonts.google.com/specimen/Inter)**
+  - CDN: Google Fonts CDN
+  - Weights: 400 (Regular), 600 (Semi-bold), 700 (Bold)
+  - 라이선스: Open Font License
+  - 용도: 영문 강조 텍스트
 
-#### 애니메이션
-- **AOS (Animate On Scroll)** v2.3.1
-  - 스크롤 기반 요소 애니메이션
-  - 800ms 애니메이션 지속시간
+- **[Pretendard](https://github.com/orioncactus/pretendard)** v1.3.9
+  - CDN: jsDelivr
+  - URL: `https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css`
+  - 라이선스: SIL Open Font License
+  - 용도: 한글 최적화 메인 폰트
+
+#### JavaScript 라이브러리
+- **[AOS (Animate On Scroll)](https://michalsnik.github.io/aos/)** v2.3.1
+  - CDN: unpkg
+  - CSS: `https://unpkg.com/aos@2.3.1/dist/aos.css`
+  - JS: `https://unpkg.com/aos@2.3.1/dist/aos.js`
+  - 라이선스: MIT
+  - 용도: 스크롤 기반 요소 애니메이션
+  - 설정: duration 800ms, offset 100px, once: true
+
+#### 브라우저 내장 API (외부 라이브러리 없음)
+- **Intersection Observer API**: 카운터 애니메이션 트리거
+- **Vanilla JavaScript**: 모든 인터랙션 구현
 
 #### 이미지 & 미디어
-- Unsplash 이미지 (무료 고품질 이미지)
-- YouTube 임베드 (학교 투어 영상)
+- **[Unsplash](https://unsplash.com)**: 무료 고품질 이미지
+  - 외부 URL 직접 참조
+  - 향후 로컬 최적화 권장
+- **YouTube Embed**: 학교 투어 동영상
+  - iframe을 통한 임베드
 
 ## ✨ 주요 기능
 
