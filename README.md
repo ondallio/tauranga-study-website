@@ -65,6 +65,10 @@ npx http-server -p 8000
 tauranga-study-website/
 ├── index.html          # 메인 웹페이지 (54.5 KB)
 ├── README.md           # 프로젝트 문서
+├── docs/               # 상세 문서
+│   ├── DESIGN_SYSTEM.md   # 디자인 시스템 가이드
+│   ├── PERFORMANCE.md     # 성능 최적화 가이드
+│   └── TESTING.md         # 테스트 가이드
 ├── .gitignore          # Git 제외 파일 목록
 └── .git/               # Git 저장소 데이터
 ```
@@ -75,6 +79,7 @@ tauranga-study-website/
   - CSS 스타일 (embedded)
   - JavaScript 로직 (embedded)
   - 모든 콘텐츠 섹션
+- **docs/**: 개발 관련 상세 문서 (디자인, 성능, 테스트)
 
 ## 🛠️ 기술 스택
 
@@ -195,27 +200,13 @@ tauranga-study-website/
 5. **카운터 애니메이션**: 통계 수치의 숫자 증가 애니메이션
 6. **스크롤 트리거 애니메이션**: AOS 라이브러리 활용
 
-## 🎨 디자인 시스템
+## 📚 문서
 
-### 컬러 팔레트
-```css
---color-primary: #1B3A6D    /* Deep Navy - 신뢰감 */
---color-secondary: #2E5090  /* Royal Blue - 전문성 */
---color-accent: #4FBDBA      /* Teal - 현대적 */
---color-gold: #D4AF37        /* Gold - 프리미엄 */
---color-light-gray: #F7F9FC  /* 배경 */
---color-white: #FFFFFF       /* 기본 배경 */
-```
+프로젝트의 상세한 기술 문서는 별도 파일로 제공됩니다:
 
-### 타이포그래피
-- **본문**: Pretendard (한글 최적화)
-- **대체 폰트**: Inter, system fonts
-- **크기 범위**: 14px - 56px (반응형)
-
-### 반응형 브레이크포인트
-- **Desktop**: 1200px 이상 - 3단 그리드, 전체 레이아웃
-- **Tablet**: 768px - 1199px - 조정된 간격 및 폰트
-- **Mobile**: 768px 미만 - 단일 컬럼, 햨버거 메뉴
+- **[🎨 디자인 시스템](docs/DESIGN_SYSTEM.md)** - 컬러 팔레트, 타이포그래피, 반응형 브레이크포인트, 애니메이션, 컴포넌트 스타일 가이드
+- **[⚡ 성능 최적화](docs/PERFORMANCE.md)** - 이미지 최적화, 코드 최적화, 로딩 성능, 캐싱 전략, 렌더링 성능 개선 방법
+- **[🧪 테스트 가이드](docs/TESTING.md)** - 브라우저 호환성, 반응형 디자인, 접근성, 성능, 기능 테스트 방법
 
 ## 📦 배포
 
@@ -309,55 +300,6 @@ AOS.init({
 YouTube iframe의 `src` 속성 변경:
 ```html
 <iframe src="https://www.youtube.com/embed/새로운_비디오_ID"></iframe>
-```
-
-## 📈 성능 최적화
-
-### 현재 상태
-- 단일 HTML 파일: 54.5 KB
-- 외부 이미지 로딩 (Unsplash)
-- CDN 기반 폰트 및 라이브러리
-
-### 개선 제안
-1. **이미지 최적화**
-   - Unsplash 이미지를 로컬로 다운로드
-   - WebP 포맷 변환
-   - 반응형 이미지 사용 (`srcset`)
-
-2. **CSS/JS 분리**
-   - 별도 파일로 분리하여 캐싱 활용
-   - CSS: `styles.css`
-   - JS: `script.js`
-
-3. **레이지 로딩**
-   - 이미지에 `loading="lazy"` 속성 추가
-   - Intersection Observer로 동영상 레이지 로드
-
-4. **압축 및 번들링**
-   - HTML/CSS/JS 압축
-   - 빌드 도구 도입 (Vite, Parcel 등)
-
-## 🧪 테스트
-
-### 브라우저 호환성 테스트
-- ✅ Chrome 90+
-- ✅ Firefox 88+
-- ✅ Safari 14+
-- ✅ Edge 90+
-
-### 모바일 기기 테스트
-- ✅ iOS Safari
-- ✅ Android Chrome
-- ✅ Samsung Internet
-
-### 반응형 테스트
-브라우저 개발자 도구에서 다양한 화면 크기 테스트:
-```
-- iPhone SE (375px)
-- iPhone 12 Pro (390px)
-- iPad (768px)
-- iPad Pro (1024px)
-- Desktop (1920px)
 ```
 
 ## 🤝 기여 가이드
